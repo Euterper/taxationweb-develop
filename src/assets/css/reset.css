@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling : touch;
+
+}
+html,body{
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+    -webkit-overflow-scrolling : touch;
+}
+body { overflow-y: scroll; background:#edf4fa !important}
+/*<!---->去掉苹果的样式*/
+input[type="button"], input[type="submit"], input[type="reset"] {
+  -webkit-appearance: none;
+}
+textarea {  -webkit-appearance: none;}
+/* 禁止缩放表单 */
+input[type="submit"], input[type="reset"], input[type="button"], {
+  resize: none;
+  border: none;
+  border:0;
+  outline: none;
+}
+textarea[disabled]{
+  color:#556888;
+  opacity: 1!important;
+}
+/* 解决input在ios上边框重影 */
+input[type="text"]{
+    -webkit-appearance: none;
+}
+input[type="tel"]{
+    -webkit-appearance: none;
+}
+/* 解决input在ios下边框重影 */
+input{
+  border-radius: 0;
+  resize: none;
+  box-sizing: border-box;
+}
+/* 去除input内阴影select默认标签样式 */
+input,select{
+  background-color: transparent;
+  border-color: transparent;
+}
+select::-ms-expand {display: none;}
+select{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+/* 取消链接高亮  */
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 设置HTML5元素为块 */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block;
+}
+
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+  display: block;
+  -ms-interpolation-mode: bicubic;/*为了照顾ie图片缩放失真*/
+}
+
+/* 初始化 */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, menu, nav, section ,span{
+  margin: 0;
+  padding: 0;
+}
+body {
+  font:12px/1.5 PingFangSC-Light, sans-serif;
+  color: #555;
+  font-family:'PingFangSC-Light, sans-serif','PingFang SC','Verdana,华文细黑';
+  background: #f8f8f8;
+  /* font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; */
+}
+em, i,b {
+  font-style: normal;
+}
+ul,li,ol{
+  list-style-type: none;
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+strong {
+  font-weight: normal;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+a {
+  text-decoration: none;
+  color: #5c5c5c;
+}
+a:hover {
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: bold;
+}
+img {
+  border: none;
+}
+.Team_filter .van-dropdown-menu .van-ellipsis:after{
+  display:none !important;
+}
+
+.Team_filter .van-dropdown-menu .van-dropdown-menu__item{
+  width: 136px;
+  height: 48px;
+  background: #f5f8fa;
+  /* color: #fff; */
+  border-radius: 24px;
+  line-height: 48px;
+}
+.Team_filter .van-dropdown-menu .van-dropdown-menu__item .van-ellipsis{
+  /* color:#fff; */
+}
+.Team_filter .van-dropdown-menu .van-dropdown-menu__title--down::after{
+  display:none;
+}
+.Team_filter .van-dropdown-menu .van-dropdown-menu__title::after,.Team_filter .van-hairline--top-bottom .van-dropdown-menu__title::after{
+  display:none;
+}
+.Team_filter .van-dropdown-item .van-popup{
+  padding-bottom:20px;
+}
+.Team_filter .van-dropdown-item .van-cell{
+  height:60px;
+  line-height:60px;
+  padding-left:72px;
+  font-size:22px;
+}
+.Team_filter .van-dropdown-item{
+  top: 185px !important;
+}
+.fixed_456 .van-dropdown-item{
+  top: 503px !important;  
+}
+.Team_filter .van-dropdown-menu__item{
+  background:#303766 !important;
+}
+.van-overflow-hidden .Team_filter .van-dropdown-menu__item{
+  background: #303766 !important;
+}
+.Team_filter .van-dropdown-menu__item .van-ellipsis{
+  color:#fff !important;
+}
+.van-overflow-hidden .Team_filter .van-dropdown-menu__item .van-ellipsis{
+  color:#fff;
+}
+.van-toast{
+  width:250px !important;
+  height:250px !important;
+  font-size: 29px !important;
+  line-height: 58px !important;
+}
+
+/*tab标签切换样式*/
+.van-swipe-cell{width:80%;margin-left:10%;}
+.van-tabs--line .van-tabs__wrap{width:100%;height: 84px !important;position: fixed;top: 87px;z-index:1000;}
+.van-tab span{line-height: 84px;font-size: 30px;}
+
+	/*复选框样式*/
+.van-checkbox__icon{
+	height:40px !important;
+	line-height:40px !important;
+}
+.van-checkbox__icon .van-icon{
+		width:40px !important;
+		height:40px !important;
+		border:1px solid #1C203E !important;
+}
+	/*Dialog*/
+.van-dialog__message{font-size: 40px !important;line-height: 100px !important;}
+.van-dialog__cancel,.van-dialog__confirm{font-size: 40px !important;line-height: 100px !important;height:100px !important;}
